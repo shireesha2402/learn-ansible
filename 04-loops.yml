@@ -23,11 +23,6 @@
 
 - name: Demo on Loops-Map
   hosts: localhost
-  vars:
-    fruits:
-      - Apple
-      - Banana
-      - Custard
   tasks:
     - name: Loop
       ansible.builtin.debug:
