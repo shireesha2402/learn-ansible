@@ -8,3 +8,16 @@
         - Apple
         - Banana
         - Custard
+- name: Demo on variables in Loops
+  hosts: localhost
+  vars:
+    fruits:
+      - Apple
+      - Banana
+      - Custard
+  tasks:
+    - name: Loop
+      ansible.builtin.debug:
+        msg: Fruit - {{ item }}
+      loop: "{{ fruits }}"
+
